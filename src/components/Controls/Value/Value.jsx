@@ -1,6 +1,4 @@
-import CountTotalFeedback from "../../utils/countTotalFeedback/CountTotalFeedback";
-import PositivePercentage from "../../utils/PositivePercentage/PositivePercentage";
-const Value = ({ value }) => {
+const Value = ({ value, total, positivePercentage }) => {
   const { good, bad, neutral } = value;
   return (
     <>
@@ -15,15 +13,11 @@ const Value = ({ value }) => {
       </li>
       <li>
         Total
-        <span>
-          <CountTotalFeedback value={value} />
-        </span>
+        <span>{total}</span>
       </li>
       <li>
         Positive feedback:
-        <span>
-          <PositivePercentage valueGoog={value} />%
-        </span>
+        <span>{positivePercentage}%</span>
       </li>
     </>
   );

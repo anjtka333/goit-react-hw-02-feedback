@@ -1,4 +1,4 @@
-const CountTotalFeedback = ({ value }) => {
+const CountTotalFeedback = (value) => {
   const { good, neutral, bad } = value;
   const total = good + neutral + bad;
   return total;
